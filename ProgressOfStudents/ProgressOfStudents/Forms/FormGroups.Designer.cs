@@ -81,6 +81,7 @@
             Name = "FormGroups";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Группы";
+            Load += FormGroups_Load;
             panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewGroups).EndInit();
             ResumeLayout(false);

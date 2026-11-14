@@ -107,6 +107,7 @@
             Name = "FormTeachers";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Преподаватели";
+            Load += FormTeachers_Load;
             panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewTeachers).EndInit();
             ResumeLayout(false);

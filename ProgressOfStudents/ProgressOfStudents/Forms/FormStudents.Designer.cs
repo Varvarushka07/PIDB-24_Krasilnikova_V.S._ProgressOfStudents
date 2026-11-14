@@ -94,6 +94,7 @@
             Name = "FormStudents";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Студенты";
+            Load += FormStudents_Load;
             panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewStudents).EndInit();
             ResumeLayout(false);

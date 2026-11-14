@@ -107,6 +107,7 @@
             Name = "FormDepartments";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Кафедры";
+            Load += FormDepartments_Load;
             panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewDepartments).EndInit();
             ResumeLayout(false);

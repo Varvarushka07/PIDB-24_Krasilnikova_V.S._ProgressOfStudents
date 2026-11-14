@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxPhone = new TextBox();
-            labelPhone = new Label();
-            textBoxHeadFullName = new TextBox();
-            labelHeadFullName = new Label();
             buttonCancel = new Button();
             buttonSave = new Button();
             textBoxName = new TextBox();
@@ -41,41 +37,9 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDownHours).BeginInit();
             SuspendLayout();
             // 
-            // textBoxPhone
-            // 
-            textBoxPhone.Location = new Point(259, 229);
-            textBoxPhone.Name = "textBoxPhone";
-            textBoxPhone.Size = new Size(182, 31);
-            textBoxPhone.TabIndex = 19;
-            // 
-            // labelPhone
-            // 
-            labelPhone.AutoSize = true;
-            labelPhone.Location = new Point(54, 235);
-            labelPhone.Name = "labelPhone";
-            labelPhone.Size = new Size(85, 25);
-            labelPhone.TabIndex = 18;
-            labelPhone.Text = "Телефон:";
-            // 
-            // textBoxHeadFullName
-            // 
-            textBoxHeadFullName.Location = new Point(259, 170);
-            textBoxHeadFullName.Name = "textBoxHeadFullName";
-            textBoxHeadFullName.Size = new Size(182, 31);
-            textBoxHeadFullName.TabIndex = 17;
-            // 
-            // labelHeadFullName
-            // 
-            labelHeadFullName.AutoSize = true;
-            labelHeadFullName.Location = new Point(54, 176);
-            labelHeadFullName.Name = "labelHeadFullName";
-            labelHeadFullName.Size = new Size(175, 25);
-            labelHeadFullName.TabIndex = 16;
-            labelHeadFullName.Text = "ФИО Заведующего:";
-            // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(294, 339);
+            buttonCancel.Location = new Point(289, 217);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(110, 38);
             buttonCancel.TabIndex = 15;
@@ -85,7 +49,7 @@
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(73, 339);
+            buttonSave.Location = new Point(68, 217);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(110, 38);
             buttonSave.TabIndex = 14;
@@ -129,12 +93,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(577, 430);
+            ClientSize = new Size(537, 316);
             Controls.Add(numericUpDownHours);
-            Controls.Add(textBoxPhone);
-            Controls.Add(labelPhone);
-            Controls.Add(textBoxHeadFullName);
-            Controls.Add(labelHeadFullName);
             Controls.Add(buttonCancel);
             Controls.Add(buttonSave);
             Controls.Add(textBoxName);
@@ -149,11 +109,6 @@
         }
 
         #endregion
-
-        private TextBox textBoxPhone;
-        private Label labelPhone;
-        private TextBox textBoxHeadFullName;
-        private Label labelHeadFullName;
         private Button buttonCancel;
         private Button buttonSave;
         private TextBox textBoxName;

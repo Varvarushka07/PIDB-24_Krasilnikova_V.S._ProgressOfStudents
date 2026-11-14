@@ -148,7 +148,7 @@
             MainMenuStrip = menuStrip1;
             Name = "FormDeanery";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormDeanery";
+            Text = "Учет успеваемости студентов";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

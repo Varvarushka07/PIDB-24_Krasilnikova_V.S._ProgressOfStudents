@@ -107,6 +107,7 @@
             Name = "FormDisciplines";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Дисциплины";
+            Load += FormDisciplines_Load;
             panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewDisciplines).EndInit();
             ResumeLayout(false);
