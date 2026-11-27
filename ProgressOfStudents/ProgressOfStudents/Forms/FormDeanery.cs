@@ -122,5 +122,6 @@ namespace ProgressOfStudents
                 MessageBox.Show(ex.Message, "Ошибка при загрузке", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
