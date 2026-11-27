@@ -1,24 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace ProgressOfStudents.Entities;
-
-public class Group
+namespace ProgressOfStudents.Entities
 {
-    public int Id { get; private set; }
-    public string GroupNumber { get; private set; } = string.Empty;
-    public int Course { get; private set; }
-    public int StreamId { get; private set; }
-
-    public static Group CreateEntity(int id, string groupNumber, int course, int streamId)
+    public class Group
     {
-        return new Group
+        [Key]
+        public int Id { get; private set; }
+
+        [Required]
+        [MaxLength(20)]
+        public string GroupNumber { get; private set; } = string.Empty;
+
+        [Required]
+        public int Course { get; private set; }
+
+        [Required]
+        public int StreamId { get; private set; }
+
+        public Group() { }
+
+        public static Group CreateEntity(int id, string groupNumber, int course, int streamId)
         {
-            Id = id,
-            GroupNumber = groupNumber ?? string.Empty,
-            Course = course,
-            StreamId = streamId
-        };
+            return new Group
+            {
+                Id = id,
+                GroupNumber = groupNumber ?? string.Empty,
+                Course = course,
+                StreamId = streamId
+            };
+        }
     }
 }

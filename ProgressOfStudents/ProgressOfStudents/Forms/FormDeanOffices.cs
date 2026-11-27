@@ -87,9 +87,10 @@ namespace ProgressOfStudents.Forms
 
         private void LoadList()
         {
-            dataGridViewDeanOffices.DataSource = _deanOfficeRepository.ReadDeanOffices();
+            dataGridViewDeanOffices.DataSource = null;
+            var data = _deanOfficeRepository.ReadDeanOffices().ToList();
+            dataGridViewDeanOffices.DataSource = data;
         }
-
         private bool TryGetIdentifierFromSelectedRow(out int id)
         {
             id = 0;

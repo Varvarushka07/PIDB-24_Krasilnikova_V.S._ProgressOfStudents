@@ -81,6 +81,7 @@
             Name = "FormAcademicPerformances";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Успеваемость";
+            Load += FormAcademicPerformances_Load;
             panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewPerformances).EndInit();
             ResumeLayout(false);

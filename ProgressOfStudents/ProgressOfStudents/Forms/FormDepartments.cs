@@ -87,7 +87,7 @@ namespace ProgressOfStudents.Forms
 
         private void LoadList()
         {
-            dataGridViewDepartments.DataSource = _departmentRepository.ReadDepartments();
+            dataGridViewDepartments.DataSource = _departmentRepository.ReadDepartments().ToList();
         }
 
         private bool TryGetIdentifierFromSelectedRow(out int id)

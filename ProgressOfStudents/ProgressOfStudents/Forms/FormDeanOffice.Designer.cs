@@ -106,7 +106,7 @@
             textBoxPhone.Size = new Size(150, 31);
             textBoxPhone.TabIndex = 7;
             // 
-            // FormDeanOffices
+            // FormDeanOffice
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -119,7 +119,7 @@
             Controls.Add(labelPhone);
             Controls.Add(labelDeanFullName);
             Controls.Add(labelName);
-            Name = "FormDeanOffices";
+            Name = "FormDeanOffice";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Деканат";
             ResumeLayout(false);

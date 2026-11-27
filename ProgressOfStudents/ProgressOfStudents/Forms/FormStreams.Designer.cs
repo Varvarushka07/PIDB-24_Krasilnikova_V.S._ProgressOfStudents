@@ -81,6 +81,7 @@
             Name = "FormStreams";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Потоки";
+            Load += FormStreams_Load;
             panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewStreams).EndInit();
             ResumeLayout(false);

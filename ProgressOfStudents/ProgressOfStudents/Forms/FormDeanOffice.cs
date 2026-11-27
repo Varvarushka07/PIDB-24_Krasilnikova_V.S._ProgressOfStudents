@@ -11,6 +11,7 @@ namespace ProgressOfStudents.Forms
     {
         private readonly IDeanOfficeRepository _deanOfficeRepository;
         private int? _deanOfficeId;
+        [Browsable(false)]
         public int Id
         {
             set
@@ -74,5 +75,6 @@ namespace ProgressOfStudents.Forms
 
         private DeanOffice CreateDeanOffice(int id) =>
             DeanOffice.CreateEntity(id, textBoxName.Text, textBoxDeanFullName.Text, textBoxPhone.Text);
+
     }
 }

@@ -30,9 +30,9 @@
         {
             dataGridViewDeanOffices = new DataGridView();
             panelButtons = new Panel();
-            buttonAdd = new Button();
+            buttonDel = new Button();
             buttonUpd = new Button();
-            this.buttonDel = new Button();
+            buttonAdd = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDeanOffices).BeginInit();
             panelButtons.SuspendLayout();
             SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             // panelButtons
             // 
-            panelButtons.Controls.Add(this.buttonDel);
+            panelButtons.Controls.Add(buttonDel);
             panelButtons.Controls.Add(buttonUpd);
             panelButtons.Controls.Add(buttonAdd);
             panelButtons.Dock = DockStyle.Right;
@@ -62,6 +62,28 @@
             panelButtons.Name = "panelButtons";
             panelButtons.Size = new Size(167, 450);
             panelButtons.TabIndex = 1;
+            // 
+            // buttonDel
+            // 
+            buttonDel.BackgroundImage = Properties.Resources.кнопка_удаления;
+            buttonDel.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonDel.Location = new Point(32, 263);
+            buttonDel.Name = "buttonDel";
+            buttonDel.Size = new Size(100, 100);
+            buttonDel.TabIndex = 2;
+            buttonDel.UseVisualStyleBackColor = true;
+            buttonDel.Click += buttonDel_Click;
+            // 
+            // buttonUpd
+            // 
+            buttonUpd.BackgroundImage = Properties.Resources.кнопка_изменения;
+            buttonUpd.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonUpd.Location = new Point(32, 148);
+            buttonUpd.Name = "buttonUpd";
+            buttonUpd.Size = new Size(100, 100);
+            buttonUpd.TabIndex = 1;
+            buttonUpd.UseVisualStyleBackColor = true;
+            buttonUpd.Click += buttonUpd_Click;
             // 
             // buttonAdd
             // 
@@ -75,28 +97,6 @@
             buttonAdd.UseVisualStyleBackColor = true;
             buttonAdd.Click += buttonAdd_Click;
             // 
-            // buttonUpd
-            // 
-            buttonUpd.BackgroundImage = Properties.Resources.кнопка_изменения;
-            buttonUpd.BackgroundImageLayout = ImageLayout.Zoom;
-            buttonUpd.Location = new Point(32, 148);
-            buttonUpd.Name = "buttonUpd";
-            buttonUpd.Size = new Size(100, 100);
-            buttonUpd.TabIndex = 1;
-            buttonUpd.UseVisualStyleBackColor = true;
-            buttonUpd.Click += buttonUpd_Click;
-            // 
-            // buttonDel
-            // 
-            this.buttonDel.BackgroundImage = Properties.Resources.кнопка_удаления;
-            this.buttonDel.BackgroundImageLayout = ImageLayout.Zoom;
-            this.buttonDel.Location = new Point(32, 263);
-            this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new Size(100, 100);
-            this.buttonDel.TabIndex = 2;
-            this.buttonDel.UseVisualStyleBackColor = true;
-            this.buttonDel.Click += this.buttonDel_Click;
-            // 
             // FormDeanOffices
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -107,6 +107,7 @@
             Name = "FormDeanOffices";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Деканаты";
+            Load += FormDeanOffices_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewDeanOffices).EndInit();
             panelButtons.ResumeLayout(false);
             ResumeLayout(false);

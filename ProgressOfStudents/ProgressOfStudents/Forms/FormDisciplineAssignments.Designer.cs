@@ -81,6 +81,7 @@
             Name = "FormDisciplineAssignments";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Ведение дисциплин";
+            Load += FormDisciplineAssignments_Load;
             panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewAssignments).EndInit();
             ResumeLayout(false);

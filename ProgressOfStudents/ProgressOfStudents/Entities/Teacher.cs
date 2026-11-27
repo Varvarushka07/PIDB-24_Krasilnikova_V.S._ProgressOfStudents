@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace ProgressOfStudents.Entities;
-
-public class Teacher
+namespace ProgressOfStudents.Entities
 {
-    public int Id { get; private set; }
-    public string FullName { get; private set; } = string.Empty;
-
-    public static Teacher CreateEntity(int id, string fullName)
+    public class Teacher
     {
-        return new Teacher
+        [Key]
+        public int Id { get; private set; }
+
+        [Required]
+        [MaxLength(150)]
+        public string FullName { get; private set; } = string.Empty;
+
+        public Teacher() { }
+
+        public static Teacher CreateEntity(int id, string fullName)
         {
-            Id = id,
-            FullName = fullName ?? string.Empty,
-        };
+            return new Teacher
+            {
+                Id = id,
+                FullName = fullName ?? string.Empty
+            };
+        }
     }
 }
