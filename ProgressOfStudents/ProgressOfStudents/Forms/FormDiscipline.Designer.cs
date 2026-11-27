@@ -39,7 +39,7 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(289, 217);
+            buttonCancel.Location = new Point(284, 198);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(110, 38);
             buttonCancel.TabIndex = 15;
@@ -49,7 +49,7 @@
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(68, 217);
+            buttonSave.Location = new Point(63, 198);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(110, 38);
             buttonSave.TabIndex = 14;
@@ -85,15 +85,18 @@
             // numericUpDownHours
             // 
             numericUpDownHours.Location = new Point(259, 110);
+            numericUpDownHours.Maximum = new decimal(new int[] { 2000, 0, 0, 0 });
+            numericUpDownHours.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownHours.Name = "numericUpDownHours";
             numericUpDownHours.Size = new Size(180, 31);
             numericUpDownHours.TabIndex = 20;
+            numericUpDownHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // FormDiscipline
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(537, 316);
+            ClientSize = new Size(577, 276);
             Controls.Add(numericUpDownHours);
             Controls.Add(buttonCancel);
             Controls.Add(buttonSave);

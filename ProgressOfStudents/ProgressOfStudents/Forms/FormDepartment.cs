@@ -12,7 +12,6 @@ namespace ProgressOfStudents.Forms
         private readonly IDepartmentRepository _departmentRepository;
         private int? _departmentId;
 
-        [Browsable(false)]
         public int Id
         {
             set

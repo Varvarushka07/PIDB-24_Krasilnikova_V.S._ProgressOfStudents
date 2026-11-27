@@ -1,28 +1,42 @@
-﻿using ProgressOfStudents.Entities.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using ProgressOfStudents.Entities.Enums;
 
-namespace ProgressOfStudents.Entities;
-
-public class AcademicPerformance
+namespace ProgressOfStudents.Entities
 {
-    public int StudentId { get; private set; }
-    public int AssignmentId { get; private set; }
-    public int Grade { get; private set; }
-    public DateTime ExamDate { get; private set; }
-    public ControlType ControlType { get; private set; }
-
-    public static AcademicPerformance CreateOperation(int studentId,
-        int assignmentId, int grade, ControlType controlType)
+    public class AcademicPerformance
     {
-        return new AcademicPerformance
+        [Key]
+        public int Id { get; private set; }
+
+        [Required]
+        public int StudentId { get; private set; }
+
+        [Required]
+        public int AssignmentId { get; private set; }
+
+        [Required]
+        [Range(2, 5)]
+        public int Grade { get; private set; }
+
+        [Required]
+        public DateTime ExamDate { get; private set; }
+
+        [Required]
+        public ControlType ControlType { get; private set; }
+
+        public AcademicPerformance() { }
+
+        public static AcademicPerformance CreateOperation(int studentId, int assignmentId, int grade, ControlType controlType)
         {
-            StudentId = studentId,
-            AssignmentId = assignmentId,
-            Grade = grade,
-            ExamDate = DateTime.Now,
-            ControlType = controlType
-        };
+            return new AcademicPerformance
+            {
+                StudentId = studentId,
+                AssignmentId = assignmentId,
+                Grade = grade,
+                ExamDate = DateTime.Now,
+                ControlType = controlType
+            };
+        }
     }
 }

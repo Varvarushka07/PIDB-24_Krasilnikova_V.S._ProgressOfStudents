@@ -74,5 +74,6 @@ namespace ProgressOfStudents.Forms
 
         private Discipline CreateDiscipline(int id) =>
             Discipline.CreateEntity(id, textBoxName.Text, (int)numericUpDownHours.Value);
+
     }
 }
